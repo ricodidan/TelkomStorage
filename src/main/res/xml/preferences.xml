@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ownCloud Android client application
+
+  Copyright (C) 2012  Bartek Przybylski
+  Copyright (C) 2012-2013 ownCloud Inc.
+
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License version 2,
+  as published by the Free Software Foundation.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:key="preference_screen">
+    <PreferenceCategory
+        android:key="general"
+        android:title="@string/prefs_category_general">
+        <ListPreference
+            android:key="storage_path"
+            android:title="@string/prefs_storage_path" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:key="synced_folders_category"
+        android:title="@string/drawer_synced_folders">
+        <com.telkomsigma.telkomstorage.ui.ThemeableSwitchPreference
+            android:key="synced_folder_on_wifi"
+            android:title="@string/auto_upload_on_wifi" />
+        <Preference
+            android:id="@+id/synced_folders_configure_folders"
+            android:key="synced_folders_configure_folders"
+            android:title="@string/synced_folders_configure_folders" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="details"
+        android:title="@string/prefs_category_details">
+        <com.telkomsigma.telkomstorage.ui.ThemeableSwitchPreference
+            android:key="set_pincode"
+            android:title="@string/prefs_passcode" />
+        <com.telkomsigma.telkomstorage.ui.ThemeableSwitchPreference
+            android:key="use_fingerprint"
+            android:title="@string/prefs_fingerprint" />
+        <com.telkomsigma.telkomstorage.ui.ThemeableSwitchPreference
+            android:key="show_hidden_files"
+            android:title="@string/prefs_show_hidden_files" />
+        <!--<com.telkomsigma.telkomstorage.ui.ThemeableSwitchPreference-->
+        <!--android:title="@string/prefs_expert_mode"-->
+        <!--android:key="expert_mode"/>-->
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="more"
+        android:title="@string/prefs_category_more">
+        <!--<Preference android:title="@string/prefs_calendar_contacts"-->
+        <!--android:key="calendar_contacts"-->
+        <!--android:summary="@string/prefs_calendar_contacts_summary" />-->
+        <Preference
+            android:key="contacts"
+            android:summary="@string/prefs_daily_contacts_sync_summary"
+            android:title="@string/actionbar_contacts" />
+        <!--<Preference android:title="@string/prefs_help" android:key="help" />-->
+        <!--<Preference android:title="@string/prefs_recommend" android:key="recommend" />-->
+        <!--<Preference android:title="@string/prefs_feedback" android:key="feedback" />-->
+        <!--<Preference android:title="@string/actionbar_logger" android:key="logger" />-->
+        <!--<Preference android:title="@string/prefs_imprint" android:key="imprint" />-->
+    </PreferenceCategory>
+    <!--<PreferenceCategory android:title="@string/prefs_category_about" android:key="about">
+
+        <Preference
+            android:title="@string/terms"
+            android:id="@+id/terms"
+            android:key="terms"/>
+
+            &lt;!&ndash;android:title="@string/prefs_sourcecode"&ndash;&gt;
+            &lt;!&ndash;android:id="@+id/sourcecode"&ndash;&gt;
+            &lt;!&ndash;android:key="sourcecode"/>&ndash;&gt;
+        &lt;!&ndash;<Preference&ndash;&gt;
+            &lt;!&ndash;android:title="@string/prefs_license"&ndash;&gt;
+            &lt;!&ndash;android:id="@+id/license"&ndash;&gt;
+            &lt;!&ndash;android:key="license"/>&ndash;&gt;
+        &lt;!&ndash;<Preference android:title="@string/about_title" android:id="@+id/about_app" android:key="about_app" />&ndash;&gt;
+    </PreferenceCategory>-->
+
+    <PreferenceCategory
+        android:key="dev_category"
+        android:title="@string/prefs_category_dev">
+        <Preference
+            android:id="@+id/dev_link"
+            android:key="dev_link"
+            android:title="Download latest dev version" />
+
+        <Preference
+            android:id="@+id/changelog_link"
+            android:key="changelog_link"
+            android:title="Changelog dev version" />
+    </PreferenceCategory>
+
+</PreferenceScreen>
